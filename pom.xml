@@ -44,17 +44,17 @@
                             <goal>report</goal>
                         </goals>
                     </execution>
-                    <!--                    <execution>-->
-                    <!--                        <id>jacoco-check</id>-->
-                    <!--                        <goals>-->
-                    <!--                            <goal>check</goal>-->
-                    <!--                        </goals>-->
-                    <!--                    </execution>-->
+                    <execution>
+                        <id>check</id>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
                 </executions>
                 <configuration>
                     <rules>
                         <rule>
-                            <element>CLASS</element>
+                            <element>BUNDLE</element>
                             <limits>
                                 <limit>
                                     <counter>BRANCH</counter>
@@ -77,6 +77,12 @@
             <version>5.6.2</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.12</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
-</project> 
+</project>
